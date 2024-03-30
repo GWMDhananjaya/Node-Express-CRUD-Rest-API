@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     database: 'school'
 });
 
-app.length('/', (req, res) => {
+app.get('/', (req, res) => {
     
     const sql = "SELECT * FROM student";
     db.query(sql, (err, result) => {
